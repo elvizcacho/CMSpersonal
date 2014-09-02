@@ -1,0 +1,19 @@
+class AdminController < ApplicationController
+	before_filter :validar_sesion
+  def index
+  	id = session[:usuario]["id"]
+  	usuario = Usuario.find(id)
+  	@session = usuario.usuario
+  end
+
+  def cerrar_sesion
+  	session[:usuario] = nil
+  	redirect_to "/login/index"
+  end
+
+  def validar_sesion
+  	if session[:usuario] == nil
+  		redirect_to "/login/index"
+  	end	
+  end
+end

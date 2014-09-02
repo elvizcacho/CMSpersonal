@@ -1,0 +1,22 @@
+<div class="container">
+	<h1>Session de <%= @session %></h1>
+	<h2>Menu</h2>
+	<%= form_tag("/admin/actualizar_menu") do %>
+		<%= crud_menu(@menu) %>
+		<%= submit_tag("Guardar",:class => "btn btn-primary") %>
+	<% end %>
+	<br/>
+	<h2>Jumbotron</h2>
+	<%= form_tag("/admin/actualizar_jumbotron",:multipart => true) do %>
+		<%= crud_jumbotron(@jumbotron) %>
+		<br/>
+		<%= submit_tag("Guardar",:class => "btn btn-primary") %>
+	<% end %>
+	<br/>
+	<h2>Thumbnails</h2>
+	<%= form_tag("/admin/actualizar_thumbnails",:multipart => true) do %>
+		<%= crud_thumbnails(@thumbnail_group) %>
+		<br/>
+		<%= submit_tag("Guardar",:class => "btn btn-primary") %>
+	<% end %>
+</div>
