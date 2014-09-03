@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'experiencias/index'
+
+  get 'emprendimientos/index'
+
+  get 'cv/index'
+
   get 'home/index'
 
   get 'home/portafolio'

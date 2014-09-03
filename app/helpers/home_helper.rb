@@ -47,7 +47,7 @@ module HomeHelper
 			html += image_tag("#{thumbnail_array[i][:picture]}",:size => "200x200")
 			html += '<div class="caption">'
 			html += "<h3>#{thumbnail_array[i][:title]}</h3>"
-			html += "<p>#{thumbnail_array[i][:text]}</p>"
+			html += '<p class="text-justify">' + "#{thumbnail_array[i][:text]}</p>"
 			html += "</div>"
 			html += "</div>"
 			html += "</div>"
