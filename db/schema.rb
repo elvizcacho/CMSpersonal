@@ -11,14 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140901220132) do
-
-  create_table "admin", force: true do |t|
-    t.string   "cuadro"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "usuario_id"
-  end
+ActiveRecord::Schema.define(version: 20140904223113) do
 
   create_table "campos_menus", force: true do |t|
     t.integer  "menu_id"

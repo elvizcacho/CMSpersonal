@@ -1,15 +1,24 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  text: MyText
+  title: Hoja de Vida
+  text: Si usted es una empresa o empleador puede que le interese conocer mi hoja de vida. Siéntase libre de descargar una copia o de verla en línea. <a href="/pdf/HojadeVida-JuanSebastiánVizcaínoCastro.pdf">Ver</a>
   picture: MyString
   link: MyString
   thumbnail_group_id: 1
 
 two:
-  title: MyString
-  text: MyText
+  title: Emprendimientos
+  text: Si usted es un inversionista o emprendedor puede que le interese conocer los emprendimientos en los que estoy trabajando. Siéntase libre de explorar cada uno de ellos y de contactarse conmigo en caso de mostrar interés en alguno de ellos. <a href="/emprendimientos/index">Más</a>
   picture: MyString
   link: MyString
   thumbnail_group_id: 1
+
+three:
+  title: Experiencias de Vida
+  text: Si usted desea saber un poco más de mi, aquí encontrará los viajes que he realizado, los hobbies que tengo, el trabajo que he desarrollado con algunos de estos como la música y el audio, etc...  <a href="/experiencias/index">Más</a>
+  picture: MyString
+  link: MyString
+  thumbnail_group_id: 1
+
+

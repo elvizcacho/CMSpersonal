@@ -35,7 +35,7 @@ module AdminHelper
 			html += "<td>"+ text_field_tag("controller#{i}","#{campo[:controller]}",:class => "form-control")+"</td>"
 			html += "<td>"+ text_field_tag("action#{i}","#{campo[:action]}",:class => "form-control")+"</td>"
 			html += "<td>"+ text_field_tag("text#{i}","#{campo[:text]}",:class => "form-control")+"</td>"
-			html += "<td>"+ link_to('<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-minus"></span></button>'.html_safe,{:action => "eliminar_campo_menu",:campo_id => "#{campo[:id]}" },method: :post) +"</td>"
+			html += "<td>"+ link_to('<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-minus"></span></button>'.html_safe,{:action => "eliminar_campo_menu",:campo_id => "#{campo[:id]}" },method: :post,:remote => true) +"</td>"
 			html += "</tr>"
 			i += 1
 		end
@@ -43,7 +43,7 @@ module AdminHelper
 		html += "<td></td>"
 		html += "<td></td>"
 		html += "<td></td>"
-		html += "<td>" + link_to('<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>'.html_safe,{:action => "crear_campo_menu"},method: :post) + "</td>"
+		html += "<td>" + link_to('<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>'.html_safe,{:action => "crear_campo_menu"},method: :post,:remote => true) + "</td>"
 		html += "</tr>"
 		html += "</table>"
 		return html.html_safe
@@ -87,7 +87,7 @@ module AdminHelper
 			html += label_tag("Texto")
 			html += text_area_tag("text#{i}",thumbnail_array[i][:text],:class => "form-control",:size => "25x7")
 			html += "</div>"
-			html += link_to('<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-minus"></span></button>'.html_safe,{:action => "eliminar_thumbnail",:thumbnail_id => "#{thumbnail_array[i][:id]}" },method: :post)
+			html += link_to('<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-minus"></span></button>'.html_safe,{:action => "eliminar_thumbnail",:thumbnail_id => "#{thumbnail_array[i][:id]}" },method: :post,:remote => true)
 			html += "</div>"
 			html += "</div>"
 			i += 1
@@ -95,7 +95,7 @@ module AdminHelper
 		html += '<div style="display:none">'
 		html += text_field_tag("cantidad","#{i}")
 		html += '</div>'
-		html += link_to('<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>'.html_safe,{:action => "crear_thumbnail"},method: :post)
+		html += link_to('<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>'.html_safe,{:action => "crear_thumbnail"},method: :post,:remote => true)
 		html += "</div>"
 		return html.html_safe
 	end

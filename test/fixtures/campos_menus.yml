@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   menu_id: 1
-  controller: MyString
-  action: MyString
-  text: MyString
+  controller: home
+  action: index
+  text: Home
 
 two:
+  id: 2
   menu_id: 1
-  controller: MyString
-  action: MyString
-  text: MyString
+  controller: home
+  action: portafolio
+  text: Portafolio

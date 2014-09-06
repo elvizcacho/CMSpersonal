@@ -24,18 +24,26 @@ class AdminController < ApplicationController
   def eliminar_campo_menu
     id = session[:usuario]["id"]
     usuario = Usuario.find(id)
+    @menu = usuario.menu
     usuario.menu.campos_menu.find(params[:campo_id]).destroy
-    redirect_to("/admin/index")
+    respond_to do |format|
+      format.html {redirect_to("/admin/index")}
+      format.js
+    end
   end
 
   def crear_campo_menu
     id = session[:usuario]["id"]
     usuario = Usuario.find(id)
+    @menu = usuario.menu
     campos_menu = usuario.menu.campos_menu
     campos_menu << CamposMenu.create(:controller => "home", :action => "default", :text => "Default")
     usuario.menu.campos_menu = campos_menu
     usuario.save
-    redirect_to("/admin/index")
+    respond_to do |format|
+      format.html {redirect_to("/admin/index")}
+      format.js
+    end
   end
 
   def actualizar_menu
@@ -55,7 +63,11 @@ class AdminController < ApplicationController
       campos_menu[i].save
       i += 1
     end
-    redirect_to("/admin/index")
+    respond_to do |format|
+      format.html {redirect_to("/admin/index")}
+      format.js
+    end
+    
   end
 
   def actualizar_jumbotron
@@ -76,9 +88,13 @@ class AdminController < ApplicationController
 
   def crear_thumbnail
     id = session[:usuario]["id"]
-    thumbnails = Usuario.find(id).thumbnail_group.thumbnail
-    thumbnails << Thumbnail.create(:title => "Default", :text => "Default", :picture => "default.png", :link => "default")
-    redirect_to("/admin/index")
+    thumbnail_array = Usuario.find(id).thumbnail_group.thumbnail
+    thumbnail_array << Thumbnail.create(:title => "Default", :text => "Default", :picture => "default.png", :link => "default")
+    @thumbnail_group = Usuario.find(id).thumbnail_group
+    respond_to do |format|
+      format.html {redirect_to("/admin/index")}
+      format.js
+    end
   end
 
   def actualizar_thumbnails
@@ -112,7 +128,10 @@ class AdminController < ApplicationController
     id = session[:usuario]["id"]
     thumbnails = Usuario.find(id).thumbnail_group.thumbnail
     thumbnails.find(params[:thumbnail_id]).destroy
-    redirect_to("/admin/index")
+    @thumbnail_group = Usuario.find(id).thumbnail_group
+    respond_to do |format|
+      format.html {redirect_to("/admin/index")}
+      format.js
+    end
   end
-
 end

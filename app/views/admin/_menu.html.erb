@@ -1,0 +1,6 @@
+<h2>Menu</h2>
+	<%= form_tag("/admin/actualizar_menu") do %>
+		<%= crud_menu(@menu) %>
+		<%= submit_tag("Guardar",:class => "btn btn-primary") %>
+	<% end %>
+	<br/>

@@ -1,0 +1,6 @@
+<%= form_tag("/admin/actualizar_thumbnails",:multipart => true) do %>
+	<%= crud_thumbnails(@thumbnail_group) %>
+	<br/>
+	<%= submit_tag("Guardar",:class => "btn btn-primary") %>
+<% end %>
+<br/>

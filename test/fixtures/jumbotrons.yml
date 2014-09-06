@@ -1,11 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  text: MyText
+  title: Juan Sebastián Vizcaíno Castro
+  text: Ingeniero electrónico - Desarrollador de software. Con experiencia como desarrollador backend y desarrollador de aplicaciones moviles.
   picture: 
-
-two:
-  title: MyString
-  text: MyText
-  picture: 
+  usuario_id: 1
