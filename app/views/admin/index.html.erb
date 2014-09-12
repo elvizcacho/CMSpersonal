@@ -1,7 +1,7 @@
 <div class="container">
 	<h1>Session de <%= @session %></h1>
 	<div id="content_menu">
-		<%= render :partial => "menu" %>
+		<%= render :partial => "menu" %> <!--aca hago el render de la vista parcial del menu -->
 	</div>
 	<h2>Jumbotron</h2>
 	<%= form_tag("/admin/actualizar_jumbotron",:multipart => true) do %>
