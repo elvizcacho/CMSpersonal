@@ -6,8 +6,8 @@
 		<div class="text-center">
 			<%= link_to(image_tag("facebook.png",:size => "150x150"),"https://www.facebook.com/elvizcacho") %>
 			<%= link_to(image_tag("twitter.png",:size => "150x150"),"https://twitter.com/elvizcacho") %>
-			<%= link_to(image_tag("googleplus.png",:size => "150x150"),"https://plus.google.com/+JuanVizcainoRulz") %>
-			<%= link_to(image_tag("linkedin.png",:size => "150x150"),"https://www.linkedin.com/pub/sebastian-vizcaino/8a/750/b78") %>
+			<%= link_to(image_tag("googleplus.png",:size => "150x150"),"https://plus.google.com/113855652392429490233") %>
+			<%= link_to(image_tag("linkedin.png",:size => "150x150"),"https://plus.google.com/113855652392429490233") %>
 		</div>
 	</div>
 </div>
