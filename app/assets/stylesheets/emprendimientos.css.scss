@@ -1,3 +1,31 @@
 // Place all the styles related to the emprendimientos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.imagen1-responsive {
+	width: 560px;
+	height: 160px;
+}
+
+.imagen2-responsive {
+	width: 500px;
+	height: 190px;
+}
+
+.descripcion-compania{
+	width: 500px;
+}
+
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+
+	.imagen1-responsive {
+		width: 460px;
+		height: 131px;
+	}
+
+	.imagen2-responsive {
+		width: 400px;
+		height: 152px;
+	}
+	
+}
